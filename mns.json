@@ -1,0 +1,17 @@
+{
+  "name": "የልጆች አስደሳች ጨዋታ 🎈",
+  "short_name": "የልጆች ጌም",
+  "description": "ከመስመር ውጭ የሚሠራ የልጆች መጽሐፍ ቅዱሳዊ ጨዋታ",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#ffeb3b",
+  "theme_color": "#4caf50",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "https://flaticon.com",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

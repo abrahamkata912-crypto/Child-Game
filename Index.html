@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="am">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>የልጆች አስደሳች ጨዋታ 🎈</title>
+    
+    <!-- የማኒፌስት ፋይል ግንኙነት -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#4caf50">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="game-container">
+        <h1>የልጆች ጨዋታ 🎈✨</h1>
+        
+        <div class="status-container">
+            <div class="score-box">ኮከብ ⭐፦ <span id="score">0</span></div>
+            <div class="timer-box">ሰዓት ⏰፦ <span id="timer">20</span></div>
+        </div>
+        
+        <div id="game-box">
+            <p id="question">ጥያቄ እዚህ ላይ ይመጣል...</p>
+            <div id="options-container">
+                <!-- ምርጫዎች እዚህ ይገባሉ -->
+            </div>
+        </div>
+
+        <div id="result-message" class="hidden"></div>
+        <button id="next-btn" class="control-btn hidden">ቀጣይ ጥያቄ ➡️</button>
+        <button id="restart-btn" class="control-btn hidden">እንደገና ጀምር 🔄</button>
+    </div>
+
+    <script src="app.js"></script>
+
+    <!-- ሰርቪስ ወርከሩን በስልኩ ብሮውዘር ላይ የመመዝገቢያ ኮድ -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('./sw.js')
+                    .then(reg => console.log('Service Worker Registered!'))
+                    .catch(err => console.log('Service Worker Error', err));
+            });
+        }
+    </script>
+</body>
+</html>

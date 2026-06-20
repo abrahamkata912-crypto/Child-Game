@@ -1,0 +1,170 @@
+body {
+    font-family: 'Comic Sans MS', 'Segoe UI', Tahoma, sans-serif;
+    background-color: #ffeb3b; /* ደስ የሚል ደማቅ ቢጫ */
+    background-image: radial-gradient(#fff 20%, transparent 20%), radial-gradient(#fff 20%, transparent 20%);
+    background-size: 40px 40px;
+    background-position: 0 0, 20px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.game-container {
+    background-color: white;
+    padding: 30px;
+    border-radius: 30px; /* ይበልጥ ክብ የሆነ ጠርዝ */
+    box-shadow: 0 15px 0px #cddc39; /* የካርቱን 3D ስታይል ጥላ */
+    border: 5px solid #4caf50; /* አረንጓዴ ፍሬም */
+    width: 90%;
+    max-width: 450px;
+    text-align: center;
+    transform: rotate(-1deg); /* ለልጆች ጨዋታ የሚሆን ዘመም ያለ ዲዛይን */
+}
+
+h1 {
+    color: #e91e63;
+    font-size: 32px;
+    margin-bottom: 15px;
+    text-shadow: 3px 3px 0px #ffcdd2;
+}
+
+.status-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.score-box {
+    color: #2196f3;
+    background: #e3f2fd;
+    padding: 10px 20px;
+    border-radius: 25px;
+    border: 3px solid #2196f3;
+    box-shadow: 0 4px 0px #bbdefb;
+}
+
+.timer-box {
+    color: #ff9800;
+    background: #fff3e0;
+    padding: 10px 20px;
+    border-radius: 25px;
+    border: 3px solid #ff9800;
+    box-shadow: 0 4px 0px #ffe0b2;
+}
+
+.timer-low {
+    color: #f44336;
+    background: #ffebee;
+    border-color: #f44336;
+    box-shadow: 0 4px 0px #ffcdd2;
+    animation: shake 0.3s infinite;
+}
+
+@keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(0px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(2px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(2px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+#question {
+    font-size: 26px;
+    font-weight: bold;
+    color: #3f51b5;
+    margin-bottom: 25px;
+    line-height: 1.6;
+    min-height: 80px;
+}
+
+.option-btn {
+    display: block;
+    width: 100%;
+    padding: 16px;
+    margin: 14px 0;
+    border: 3px solid #ff5722;
+    background-color: white;
+    border-radius: 25px;
+    font-size: 22px;
+    font-weight: bold;
+    color: #5d4037;
+    cursor: pointer;
+    transition: all 0.1s ease;
+    box-shadow: 0 6px 0px #ffccbc;
+}
+
+.option-btn:hover:not([disabled]) {
+    background-color: #fff3e0;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 0px #ffccbc;
+}
+
+.option-btn:active:not([disabled]) {
+    transform: translateY(4px);
+    box-shadow: 0 2px 0px #ffccbc;
+}
+
+.correct {
+    background-color: #4caf50 !important;
+    color: white;
+    border-color: #388e3c !important;
+    box-shadow: 0 6px 0px #c8e6c9 !important;
+}
+
+.wrong {
+    background-color: #f44336 !important;
+    color: white;
+    border-color: #d32f2f !important;
+    box-shadow: 0 6px 0px #ffcdd2 !important;
+}
+
+button.control-btn {
+    margin-top: 25px;
+    padding: 15px 40px;
+    background-color: #e91e63;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    font-size: 22px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 6px 0px #c2185b;
+    transition: 0.1s;
+}
+
+button.control-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 0px #c2185b;
+}
+
+button.control-btn:active {
+    transform: translateY(6px);
+    box-shadow: 0 0px 0px #c2185b;
+}
+
+.hidden {
+    display: none;
+}
+
+#result-message {
+    font-weight: bold;
+    margin-top: 20px;
+    font-size: 24px;
+    animation: pop 0.3s ease-out;
+}
+
+@keyframes pop {
+    0% { transform: scale(0.8); }
+    10% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
